@@ -75,7 +75,7 @@ class CrimeData {
 		$areaData = new Postcode($this->postcode);
 		$latAndLongString = '';
 		$first = true;
-		foreach($areaData->pointsArroundPostcode as $area){
+		foreach($areaData->pointsAroundPostcode as $area){
 			if(!$first){
 				$latAndLongString .= ':';
 			}

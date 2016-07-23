@@ -47,7 +47,7 @@ class Postcode {
 	* @var array
 	* @access public
 	*/
-	public $pointsArroundPostcode = [];
+	public $pointsAroundPostcode = [];
 
 	/**
 	* The address of the API we are using to get the lat and long of postcode
@@ -138,7 +138,7 @@ class Postcode {
 			];
 
 		}
-		$this->pointsArroundPostcode = $latsAndLongs;
+		$this->pointsAroundPostcode = $latsAndLongs;
 	}
 }
 ?>
