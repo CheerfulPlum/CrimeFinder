@@ -1,0 +1,65 @@
+body {
+	background-color: #FFF;
+	color: #444;
+}
+.centerBox, .centerBoxResults {
+	background-color: #EFEFEF;
+	margin: auto;
+	border-radius: 10px;
+	font-family: Arial,Helvetica,sans-serif;
+	padding: 20px;
+	margin-top: 20px;
+}
+.centerBox {
+	width: 200px;
+}
+.centerBoxResults {
+	width: 700px;
+}
+h1, h2 {
+	font-weight: 500;
+	text-align: center;
+	padding: 10px 20px;
+}
+.centerBox form {
+	text-align: center;
+}
+.centerBox input[type='text']{
+	width: 80%;
+	margin: auto;
+	font-size: 20px;
+	text-align: center;
+	margin: 5px 0;
+	text-transform: uppercase;
+}
+.centerBox input[type='submit']{
+	border-radius: 3px;
+	font-size: 20px;
+	padding: 10px 20px;
+	border: 1px solid #AAA;
+	background: #DDD url("/images/uniGrade.png") repeat scroll 0% 0%;
+	width: 83%;
+	color: #666;
+	font-weight: 600;
+	margin: 5px 0;
+
+}
+.centerBox input[type='submit']:hover, .centerBox input[type='submit']:active {
+	background: #BBB url("/images/uniGrade.png") repeat scroll 0% 0%;
+	border: 1px solid #888;
+}
+.error {
+	color: red;
+}
+.centerBox select {
+	width: 84%;
+	text-align: center;
+	padding: 5px 10px;
+	margin: 5px 0;
+}
+.centerBoxResults table{
+	border-collapse: collapse;
+}
+.centerBoxResults table tr th, .centerBoxResults table tr td {
+	border: 1px solid #CCC;
+}
