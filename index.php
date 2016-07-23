@@ -31,13 +31,12 @@ if(count($errors)){
 	}
 	echo '</ul>';
 }
-echo <<<EOT
+echo '
 		<form>
-		<input type="text" name="postcode" placeholder="Postcode">
-		<input type="submit" name="lookup" value="Lookup Crimes">
+		<input type="text" name="postcode" ' . (isset($_GET['postcode']) ? 'value="' . htmlspecialchars($_GET['postcode']) . '"' : '') . 'placeholder="Postcode">
+		<input type="submit" value="Lookup Crimes">
 		</form>
-	</div>
-EOT;
+	</div>';
 if(isset($crimeData)){
 	echo <<<EOT
 	<div class="centerBoxResults">
