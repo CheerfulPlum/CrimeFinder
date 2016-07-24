@@ -32,6 +32,16 @@ class CrimeData {
 	public $postcode;
 
 	/**
+	* Totals for each type of crime
+	*
+	* Totals for each type of crime
+	*
+	* @var array
+	* @access public
+	*/
+	public $total=[];
+
+	/**
 	* The URL of the police API
 	*
 	* Full URL of the police API used when searching for crimes, query
@@ -100,7 +110,13 @@ class CrimeData {
 			$crimeObj->location['longitude'] = $crime->location->longitude;
 			$crimeObj->location['street'] = $crime->location->street->name;
 			$this->crimes[] = $crimeObj;
+			if(!array_key_exists($crimeObj->category, $this->total) && $crimeObj->category){
+				$this->total[$crimeObj->category] = 0;
+			}
+			$this->total[$crimeObj->category]++;
 		}
+		// Sort backwards and maintain asoc indexes
+		arsort($this->total);
 
 	}
 }

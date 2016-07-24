@@ -59,6 +59,7 @@ h1, h2 {
 }
 .centerBoxResults table{
 	border-collapse: collapse;
+	margin-top: 10px;
 }
 .centerBoxResults table tr th, .centerBoxResults table tr td {
 	border: 1px solid #CCC;

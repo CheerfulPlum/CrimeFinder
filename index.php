@@ -40,6 +40,20 @@ echo '
 if(isset($crimeData)){
 	echo <<<EOT
 	<div class="centerBoxResults">
+		<h2>Results</h2>
+		<table>
+			<tr>
+				<th>Crime</th>
+				<th>Total</th>
+			</tr>
+EOT;
+	foreach($crimeData->total as $crimeType => $total){
+		echo '<tr>
+			<td>' . $crimeType . '</td>
+			<td>' . $total .'</td>
+		</tr>';
+	}
+	echo <<<EOT
 		<table>
 			<tr>
 				<th>Date</th>
