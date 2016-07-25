@@ -18,7 +18,7 @@ echo <<<EOT
 <html>
 <head>
 	<title>Find Crime in Your Area | Crime Finder</title>
-	<link rel="stylesheet" type="text/css" href="/styles/main.css" />
+	<link rel="stylesheet" type="text/css" href="styles/main.css" />
 </head>
 <body>
 	<h1>Crime Finder</h1>
