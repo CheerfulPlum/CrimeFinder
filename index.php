@@ -55,7 +55,6 @@ EOT;
 					<th>Outcome</th>
 				</tr><td>';
 		foreach($crimeData->crimes as $crime){
-			print_r($crime);
 			if($crime->category == $crimeType){
 				echo '<tr>
 						<td>' . $crime->date . '</td>
