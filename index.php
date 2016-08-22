@@ -14,7 +14,7 @@ if(!empty($_GET['postcode'])){
 }
 Html::outputHeader();
 echo <<<EOT
-	<div class="text-center">
+	<div class="text-center mainBlock">
 EOT;
 if(count($errors)){
 	echo '<ul class="error">';
@@ -41,19 +41,19 @@ if(isset($crimeData)){
 			</tr>
 EOT;
 	foreach($crimeData->total as $crimeType => $total){
-		echo '<tr onclick="displayCrimes(\'' . str_replace(' ', '-', $crimeType) . '\')">
+		echo '<tr class="mouseHover" onclick="displayCrimes(\'' . str_replace(' ', '-', $crimeType) . '\')">
 			<td>' . $crimeType . '</td>
 			<td>' . $total .'</td>
 		</tr>
 		<tr class="noHoverCell">
-			<td style="display: none;" colspan="3" class="noHoverCell ' . str_replace(' ', '-', $crimeType) . '-Breakdown">
-			<div style="display: none;" colspan="3" class="noHoverCell ' . str_replace(' ', '-', $crimeType) . '-Breakdown">
-			<table class="table-striped table-bordered crimeBreakdown">
+			<td style="display: none;" colspan="3" class="noHoverCell ' . str_replace(' ', '-', $crimeType) . '-Breakdown noPadding crimeBreakdownInfo">
+			<div style="display: none;" colspan="3" class="noHoverCell ' . str_replace(' ', '-', $crimeType) . '-Breakdown crimeBreakdownInfo">
+			<table class="table table-striped table-bordered crimeBreakdown">
 				<tr>
 					<th>Date</th>
 					<th>Location</th>
 					<th>Outcome</th>
-				</tr><td>';
+				</tr>';
 		foreach($crimeData->crimes as $crime){
 			if($crime->category == $crimeType){
 				echo '<tr>
@@ -64,12 +64,15 @@ EOT;
 			}
 		}
 		echo '
+			</tr>
 			</table>
 			</div>
 			</td>
-		</tr>';
+		</tr>
+		';
 	}
 	echo <<<EOT
+	</table>
 	</div>
 EOT;
 }

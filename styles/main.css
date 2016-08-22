@@ -13,7 +13,7 @@ body {
 	width: 200px;
 }
 .crimeResults {
-	width: 50%;
+	width: 75%;
 }
 h1, h2 {
 	font-weight: 500;
@@ -21,10 +21,18 @@ h1, h2 {
 	padding: 10px 20px;
 }
 .crimeButton {
-	width: 100%;
+	width: 75%;
 	margin-top: 10px;
 	height: 60px;
+	font-size: 20px;
 }
+.mainBlock {
+	min-height: 200px;
+}
+.postCodeInput {
+		width: 75%;
+		display: inline;
+	}
 .centerBox form {
 	text-align: center;
 }
@@ -36,6 +44,9 @@ h1, h2 {
 	margin: 5px 0;
 	text-transform: uppercase;
 }
+/*
+	Non-mobile
+*/
 @media screen and (min-width: 600px) {
 	.postCodeInput {
 		width: auto;
@@ -45,6 +56,9 @@ h1, h2 {
 	.crimeButton {
 		width: 300px;
 		height: auto;
+	}
+	.crimeResults {
+		width: 50%;
 	}
 }
 .noHoverCell:hover {
@@ -84,4 +98,24 @@ h1, h2 {
 }
 .crimeBreakdown {
 	width: 100%;
+	margin-top: 10px;
+}
+.noPadding {
+	padding: 0 !important;
+}
+.mouseHover {
+	cursor: pointer;
+}
+.footer {
+	height: 180px;
+	margin: 30px 0 0 0;
+}
+.footer p {
+	font-size: 12px;
+}
+.logo{
+	width: 200px;
+}
+.tinyLogo img{
+	width: 40px;
 }

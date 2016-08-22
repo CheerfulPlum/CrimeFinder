@@ -105,7 +105,7 @@ class CrimeData {
 
 			$crimeObj->category = ucwords(str_replace('-', ' ', $crime->category));
 			$crimeObj->outcome = (is_object($crime->outcome_status) ? $crime->outcome_status->category : 'No Outcome Yet');
-			$crimeObj->date = $crime->month;
+			$crimeObj->date = Utility::convertMonthYear($crime->month);
 			$crimeObj->location['latitude'] = $crime->location->latitude;
 			$crimeObj->location['longitude'] = $crime->location->longitude;
 			$crimeObj->location['street'] = $crime->location->street->name;

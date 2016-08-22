@@ -11,10 +11,13 @@ class Html {
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<title>Find Crime in Your Area | Crime Finder</title>
+	<title>Find Crime in Your Area | Crimify</title>
 	<link rel="stylesheet" type="text/css" href="styles/main.css" />
 	<script>
 		function displayCrimes(crimeArea){
+			$('.' + crimeArea + '-Breakdown').removeClass('crimeBreakdownInfo');
+			$('.crimeBreakdownInfo').slideUp();
+			$('.' + crimeArea + '-Breakdown').addClass('crimeBreakdownInfo');
 			$('.' + crimeArea + '-Breakdown').slideToggle();
 		}
 	</script>
@@ -26,13 +29,17 @@ EOT;
 </head>
 <body>
 <div class="jumbotron text-center">
-  <h1>Crime Finder</h1>
-  <p>Find crime in your local area!</p> 
+	<img class="logo" src="images/logo512.png">
+	<h1>Crimify</h1>	
+	<p>Find crime in your local area!</p> 
 </div>
 EOT;
 	}
 	public static function outputFooter(){
 		echo <<<EOT
+		<footer class="jumbotron text-center footer">
+			<p><div class="tinyLogo"><img src="images/logo512.png"><p>Crimify</p></div><br />Luke 'CheerfulPlum' Pace 2016</p>
+		</footer>
 </body>
 EOT;
 	}
