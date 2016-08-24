@@ -103,6 +103,7 @@ class CrimeData {
 		foreach ($crimeInfo as $crime) {
 			$crimeObj= new Crime();
 
+			$crimeObj->id = $crime->persistent_id;
 			$crimeObj->category = ucwords(str_replace('-', ' ', $crime->category));
 			$crimeObj->outcome = (is_object($crime->outcome_status) ? $crime->outcome_status->category : 'No Outcome Yet');
 			$crimeObj->date = Utility::convertMonthYear($crime->month);

@@ -14,6 +14,14 @@
 class Crime {
 
 	/**
+	* The ID of the crime, this is taken from the API
+	*
+	* @var string
+	* @access public
+	*/
+	public $id;
+	
+	/**
 	* The category of the crime
 	*
 	* @var string
@@ -47,9 +55,16 @@ class Crime {
 	public $location = [];
 
 	/**
+	* The address of the API we are using to look up details for a specific crime
+	* @var string
+	*/
+	const CRIME_API_LOOKUP_URL = 'https://data.police.uk/api/outcomes-for-crime/';
+	
+	/**
 	* Very basic constructor
 	*
 	* Just sets some default values
+	* @param string $id the ID of the crime 
 	* @return void
 	*
 	* @access public
@@ -57,13 +72,27 @@ class Crime {
 	*
 	*/
 
-	public function __construct(){
+	public function __construct($id = null){
+		// If there is an ID passed then lookup the crime using the API
+		if($id){
+			$url = self::CRIME_API_LOOKUP_URL . $id;
+			if(!$crime = @json_decode(file_get_contents($url))){
+				throw new Exception('Crime Not Found Using ID');
+				return false;
+			}
+			// Popluate object...
+			else{
+				// STUB
+			}
+		}
 		// Just set some basic properties
-		$this->location = [
-			'latitude' => null,
-			'longitude' => null,
-			'street' => null
-		]; 
+		else{
+			$this->location = [
+				'latitude' => null,
+				'longitude' => null,
+				'street' => null
+			];
+		}
 	}
 }
 ?>

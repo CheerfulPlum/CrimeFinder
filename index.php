@@ -55,8 +55,7 @@ EOT;
 				</tr>';
 		foreach($crimeData->crimes as $crime){
 			if($crime->category == $crimeType){
-				print_r($crime->location['street']);
-				echo '<tr onclick="document.location = \'location.php?long=' . $crime->location['longitude'] . '&lat=' . $crime->location['latitude'] . '\';">
+				echo '<tr onclick="document.location = \'location.php?crimeId=' . $crime->id . '\';">
 						<td>' . $crime->date . '</td>
 						<td>' . $crime->location['street'] . '</td>
 						<td>' . $crime->outcome . '</td>
