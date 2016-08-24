@@ -1,5 +1,13 @@
+html {
+	background-color: #eee;
+	height: 100%;
+}
 body {
-	background-color: #FFF;
+	height: 100%;
+	background-color: #eee;
+}
+.header {
+	margin-bottom: 0;
 }
 .centerBox, .centerBoxResults {
 	background-color: #EFEFEF;
@@ -14,6 +22,7 @@ body {
 }
 .crimeResults {
 	width: 75%;
+	padding-bottom: 40px;
 }
 h1, h2 {
 	font-weight: 500;
@@ -28,6 +37,9 @@ h1, h2 {
 }
 .mainBlock {
 	min-height: 200px;
+	background-color: #FFF;
+	padding-top: 50px;
+	margin-bottom: 20px;
 }
 .postCodeInput {
 		width: 75%;
@@ -100,6 +112,9 @@ h1, h2 {
 	width: 100%;
 	margin-top: 10px;
 }
+.crimeBreakdown tr:hover, .crimeBreakdown tr:active {
+	cursor: pointer;
+}
 .noPadding {
 	padding: 0 !important;
 }
@@ -107,7 +122,6 @@ h1, h2 {
 	cursor: pointer;
 }
 .footer {
-	height: 180px;
 	margin: 30px 0 0 0;
 }
 .footer p {

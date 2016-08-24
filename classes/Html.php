@@ -28,7 +28,7 @@ EOT;
 	echo <<<EOT
 </head>
 <body>
-<div class="jumbotron text-center">
+<div class="jumbotron text-center header">
 	<img class="logo" src="images/logo512.png">
 	<h1>Crimify</h1>	
 	<p>Find crime in your local area!</p> 

@@ -8,16 +8,16 @@ $script = <<<EOT
 <script>
 function initialize() {
   var mapProp = {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
+    center:new google.maps.LatLng({$_GET['lat']},{$_GET['long']}),
+    zoom:12,
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-	var myLatLng = {lat: 51.398901, lng: -1.255210 };
+	var myLatLng = {lat: {$_GET['lat']}, lng: {$_GET['long']} };
 	var marker = new google.maps.Marker({
 		position: myLatLng,
 		map: map,
-		title: 'Hello World!'
+		title: 'Crime'
 	});
 
 }
